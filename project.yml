@@ -1,0 +1,24 @@
+name: PS4PKGSender
+options:
+  bundleIdPrefix: com.yousef
+targets:
+  PS4PKGSender:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources: [Sources]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.yousef.ps4pkgsender
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.0"
+    info:
+      path: Sources/Info.plist
+      properties:
+        CFBundleDisplayName: PS4 PKG Sender
+        UILaunchScreen: {}
+        NSLocalNetworkUsageDescription: للاتصال بجهاز PS4 على الشبكة المحلية
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+          NSAllowsLocalNetworking: true
